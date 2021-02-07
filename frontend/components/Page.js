@@ -54,17 +54,14 @@ const InnerStyles = styled.div`
 
 export default function Page({ children }) {
   return (
-    <div>
+    <>
       <GlobalStyles />
       <Header />
       <InnerStyles>{children}</InnerStyles>
-    </div>
+    </>
   );
 }
 
 Page.propTypes = {
-  children: PropTypes.oneOf([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  children: PropTypes.node,
 };
