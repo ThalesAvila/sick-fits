@@ -24,7 +24,15 @@ function Products() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
-  return <div>Products</div>;
+  return (
+    <>
+      <div>
+        {data.allProducts.map((product) => (
+          <p key={product.id}>{product.name}</p>
+        ))}
+      </div>
+    </>
+  );
 }
 
 export default Products;
